@@ -5,8 +5,8 @@ import Navbar from "./Navbar";
 export default function Banner()
 {
     return (
-        <div className="banner sticky">
-            <div className="columns-3 container">
+        <div className="banner sticky shadow">
+            <div className="flex-spread container">
                 <Image src={logo} />
                 <Navbar />
                 <button>Schedule</button>

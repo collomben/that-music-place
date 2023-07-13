@@ -5,8 +5,8 @@ export default function Hero(props)
 {
     const classString = props.fullHeight ? "split-2-even fullHeight" : "split-2-even";
     return (
-        <div className={classString}>
-            <div className="hero left">
+        <div className={classString + " container"}>
+            <div className="hero left backdrop blurred">
                 <h1>That Music Place is <span className="accent">your place</span> for instruments, accessories, & instruction.</h1>
                 <div className="split-2-even">
                     <button>Private Lessons</button>
@@ -14,10 +14,7 @@ export default function Hero(props)
                 </div>
             </div>
             <div className="hero right">
-                <Image src={placeholder}
-                    alt="Professional Photo of myself"
-                    height={600}
-                    />
+                
             </div>
         </div>
     );

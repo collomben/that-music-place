@@ -1,12 +1,18 @@
 html {
   /* background-color: whitesmoke; */
   background-color: #d9ae89;
-background-image: url("https://www.transparenttextures.com/patterns/debut-dark.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-image: url("https://www.transparenttextures.com/patterns/debut-dark.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .banner {
-  background-color: #89D9C2;
+  background-color: #89d9c2;
 }
 
 h3 {
@@ -14,7 +20,7 @@ h3 {
 }
 
 .blurred {
-  box-shadow: 0 0 8px 8px #d9ae89;
+  box-shadow: 0 0 8px 8px rgba(217, 174, 137, .8);
 }
 
 .sticky {
@@ -30,36 +36,73 @@ h3 {
   max-width: 1250px;
 }
 
+.section {
+  background-color: rgba(235, 212, 192, .3);
+}
+
 .navbar {
   display: flex;
   justify-content: space-evenly;
   flex-grow: 2;
 }
 
-.hero.left{
+.content-centered {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.hero.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.backdrop {
+  padding: 1rem;
+  background-color: rgba(217, 174, 137, .8);
+  border-radius: 8px;
+}
+
+.hero.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 button {
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
 .split-2-even {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .columns-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.flex-spread {
   display: flex;
   justify-content: space-between;
 }
 
-.landingImage {
-  height: 500px;
+.bgImage {
   z-index: 0;
+}
+
+.landingImage {
+  width: 100%;
+  height: 600px;
+  background-image: url("../public/images/stock-guitar.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .landingText {
@@ -71,5 +114,39 @@ button {
 }
 
 .accent {
-  color: #44AFF2;
+  color: #44aff2;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+.filled {
+  background: rgb(2,0,36);
+background: linear-gradient(114deg, rgba(2,0,36,1) 0%, rgba(68,175,242,1) 25%, rgba(137,217,194,1) 91%, rgba(2,0,36,1) 100%);
+}
+
+.card {
+  max-width: 300px;
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d9ae89;  
+}
+
+.card p {
+  padding: 1rem;
+}
+
+.shadow {
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1300px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
